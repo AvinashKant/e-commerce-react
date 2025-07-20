@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import "../assets/css/home.css"
 export default function Home() {
     return (
         <>
@@ -9,7 +10,7 @@ export default function Home() {
                         <div>
                             <h2>What's on your mind?</h2>
                         </div>
-                        <div>
+                        <div className='arrowBtns'>
                             <button className="btnArrorw">
                                 <FontAwesomeIcon icon={faArrowLeft} />
                             </button>
@@ -58,12 +59,12 @@ export default function Home() {
                         <div>
                             <h2>Top restaurant chains in Chhindwara</h2>
                         </div>
-                        <div>
+                        <div className='arrowBtns'>
                             <button className="btnArrorw">
-                                <i className="fa-solid fa-arrow-left"></i>
+                                <FontAwesomeIcon icon={faArrowLeft} />
                             </button>
                             <button className="btnArrorw">
-                                <i className="fa-solid fa-arrow-right"></i>
+                                <FontAwesomeIcon icon={faArrowRight} />
                             </button>
                         </div>
                     </div>
