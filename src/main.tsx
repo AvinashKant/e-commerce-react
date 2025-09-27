@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import "./main.css"
 
 
-import router from "./routes";
+import router from "./routes.jsx";
 import { RouterProvider } from "react-router";
 
 

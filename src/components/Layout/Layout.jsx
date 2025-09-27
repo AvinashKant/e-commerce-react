@@ -6,7 +6,7 @@ export default function Layout() {
     return (
         <>
             <HeaderWapper />
-            <div style={{top: '80px',position: 'relative'}} className="">
+            <div>
                 <Outlet />
             </div>
         </>
