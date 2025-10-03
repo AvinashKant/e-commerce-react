@@ -5,6 +5,7 @@ import Layout from "./components/Layout/Layout";
 import Login from "./features/login/Login";
 import Register from "./features/register/Register";
 import Home from "./pages/Home";
+import ContactUs from "./pages/ContactUs";
 
 const publicRoutes = [
   {
@@ -18,6 +19,10 @@ const publicRoutes = [
   {
     path: "singup",
     element: <Register />
+  },
+  {
+    path: "contact-us",
+    element: <ContactUs />
   }
 ];
 
