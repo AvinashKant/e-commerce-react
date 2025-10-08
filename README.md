@@ -18,3 +18,6 @@
 
 
 # https://stackedit.io/app#
+
+https://www.npmjs.com/package/@hugeicons/react
+https://hugeicons.com/packages
