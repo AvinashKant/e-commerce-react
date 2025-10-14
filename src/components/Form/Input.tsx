@@ -20,10 +20,10 @@ const Input: React.FC<InputProps> = ({
             />
             <label
                 htmlFor="fullname"
-                className="absolute left-3 top-3 text-black font-semibold text-base
+                className="absolute left-3 top-3 font-semibold text-base
                transition-all duration-200 ease-in-out
                peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-lg
-               peer-focus:top-1 peer-focus:text-xs peer-focus:text-blue-600"
+               peer-focus:top-1 peer-focus-out:top-1 peer-focus:text-xs peer-focus:text-blue-600"
             >
                 {placeholderText}
             </label>

@@ -8,6 +8,7 @@ interface ValueProp {
     text: string;
     value: string | number;
 }
+
 const Select: React.FC<SelectProps> = ({
     placeholderText,
     classes,
@@ -15,7 +16,9 @@ const Select: React.FC<SelectProps> = ({
 }) => {
     return (
         <div className={`flex flex-col w-full ${classes}`}>
-            <label htmlFor="">{placeholderText}</label>
+            <label className="text-black text-md" htmlFor="">
+                {placeholderText}
+            </label>
             <select className="w-full h-12 px-3 text-md border border-gray-300 rounded-md" name="" id="">
                 <option value="">Select {placeholderText}</option>
                 {
