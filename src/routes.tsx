@@ -6,6 +6,9 @@ import Login from "./features/login/Login";
 import Register from "./features/register/Register";
 import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
+import Dashboard from "./pages/Dashboard";
+import Boards from "./pages/Boards";
+import Issues from "./pages/Issues";
 
 const publicRoutes = [
   {
@@ -23,6 +26,18 @@ const publicRoutes = [
   {
     path: "contact-us",
     element: <ContactUs />
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard />
+  },
+  {
+    path: "Issues",
+    element: <Issues />
+  },
+  {
+    path: "boards",
+    element: <Boards />
   }
 ];
 

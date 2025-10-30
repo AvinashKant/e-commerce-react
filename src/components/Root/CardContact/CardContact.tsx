@@ -17,32 +17,34 @@ const CardContact: React.FC<CardContactProps> = ({
     link,
 }) => {
     return (
-        <div className="bg-gray-100 p-6 m-4 rounded-md">
+        <div className="bg-white p-6 mt-6 mb-6 rounded-md">
             {heading && <h1 className="text-xl font-semibold">{heading}</h1>}
-
             {subHeading && <p className="text-gray-700 mt-1">{subHeading}</p>}
+            <div className="flex justify-between">
+                <div className='flex-1'>
+                    {sideText && <h6 className="text-gray-600">{sideText}</h6>}
+                </div>
+                <div className='flex-1 justify-center'>
+                    {link && (
+                        <div className='flex justify-end'>
+                            <NavLink
+                                to={link}
+                                className="flex text-sm font-semibold text-gray-900 hover:text-blue-600"
+                            >
+                                Learn more
+                            </NavLink>
 
-            <div className="flex items-center justify-between mt-4">
-                {sideText && <h6 className="text-sm text-gray-600">{sideText}</h6>}
-
-                {link && (
-                    <NavLink
-                        to={link}
-                        className="flex items-center text-sm font-semibold text-gray-900 hover:text-blue-600"
-                    >
-                        Learn more
-                        <HugeiconsIcon
-                            icon={ArrowRight01FreeIcons}
-                            size={20}
-                            color="#000000"
-                            strokeWidth={1.5}
-                            className="ml-1"
-                        />
-                    </NavLink>
-                )}
+                            <HugeiconsIcon
+                                icon={ArrowRight01FreeIcons}
+                                size={20}
+                                color="#000000"
+                                strokeWidth={1.5}
+                            />
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );
 };
-
 export default CardContact;
