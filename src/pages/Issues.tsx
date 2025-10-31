@@ -11,7 +11,6 @@ const Links = [
 
 export default function Issues() {
     return (
-
         <>
             <Breadcrumb links={Links} />
             <div className="flex flex-col justify-center items-center">
@@ -34,7 +33,6 @@ export default function Issues() {
                         <button>
                             Import issues
                         </button>
-
                     </div>
                 </div>
                 <div>
