@@ -1,5 +1,3 @@
-
-
 import { NavLink } from "react-router";
 export default function RootHeader() {
     return (

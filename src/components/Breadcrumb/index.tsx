@@ -13,7 +13,7 @@ interface BreadcrumbProps {
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ links }) => {
     return (
-        <div className="flex  text-gray-600">
+        <div className="flex border-b-1 mb-2  text-gray-600">
             <span>
                 Home
             </span>

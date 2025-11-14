@@ -1,5 +1,5 @@
 import Breadcrumb from '../components/Breadcrumb'
-
+import { Select } from 'avinash-react-component-library'
 import { HugeiconsIcon } from '@hugeicons/react';
 import { ArrowRight01Icon, Home01Icon } from '@hugeicons/core-free-icons';
 const Links = [
@@ -9,10 +9,36 @@ const Links = [
     },
 ];
 
+const selectchange = (value: string | number) => {
+    console.log("Select changed to:", value);
+};
+const options = [{
+    "title": "asd1",
+    "value": "asd"
+}];
+
+
 export default function Issues() {
     return (
         <>
             <Breadcrumb links={Links} />
+            <div className='flex justify-between p-1 border-b-1 mb-3'>
+
+                <div className="flex gap-4">
+                    <a href="">Open</a>
+                    <a href="">Closed</a>
+                    <a href="">All</a>
+                </div>
+                <div className="flex gap-3">
+                    <button className=''>
+                        Bulk edit
+                    </button>
+                    <button className=''>
+                        New item
+                    </button>
+                </div>
+
+            </div>
             <div className="flex flex-col justify-center items-center">
                 <div className="flex flex-col items-center gap-1 max-w-2xl">
                     <HugeiconsIcon
@@ -49,9 +75,12 @@ export default function Issues() {
                             </a>
                         </div>
                     </div>
+                    <Select
+                        options={options}
+                        onChange={selectchange}
+                    />
                 </div>
             </div>
         </>
-
     )
 }
