@@ -1,5 +1,4 @@
 import Breadcrumb from '../components/Breadcrumb'
-import { Select } from 'avinash-react-component-library'
 import { HugeiconsIcon } from '@hugeicons/react';
 import { ArrowRight01Icon, Home01Icon } from '@hugeicons/core-free-icons';
 const Links = [
@@ -9,9 +8,6 @@ const Links = [
     },
 ];
 
-const selectchange = (value: string | number) => {
-    console.log("Select changed to:", value);
-};
 const options = [{
     "title": "asd1",
     "value": "asd"
@@ -40,7 +36,7 @@ export default function Issues() {
 
             </div>
             <div className="flex flex-col justify-center items-center">
-                <div className="flex flex-col items-center gap-1 max-w-2xl">
+                <div className="flex flex-col items-center gap-1 max-w-2xl ">
                     <HugeiconsIcon
                         icon={Home01Icon}
                         size={24}
@@ -48,7 +44,7 @@ export default function Issues() {
                         strokeWidth={1.5}
                         className="items-center"
                     />
-                    <h1>Track bugs, plan features, and organize your work with issues</h1>
+                    <h1 className="text-3xl text-center font-semibold">Track bugs, plan features, and organize your work with issues</h1>
                     <p>
                         Use issues (also known as tickets or stories on other platforms) to collaborate on ideas, solve problems, and plan your project.
                     </p>
@@ -56,12 +52,9 @@ export default function Issues() {
                         <button className=''>
                             New item
                         </button>
-                        <button>
-                            Import issues
-                        </button>
                     </div>
                 </div>
-                <div>
+                <div className="border-t">
                     <div className="flex flex-row">
                         <div>
                             Using Jira for issue tracking?
@@ -75,10 +68,6 @@ export default function Issues() {
                             </a>
                         </div>
                     </div>
-                    <Select
-                        options={options}
-                        onChange={selectchange}
-                    />
                 </div>
             </div>
         </>
