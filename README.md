@@ -21,3 +21,18 @@
 
 https://www.npmjs.com/package/@hugeicons/react
 https://hugeicons.com/packages
+
+
+
+
+
+import { Select } from 'avinash-react-component-library'
+
+                    <Select
+                        options={options}
+                        onChange={selectchange}
+                    />
+
+					const selectchange = (value: string | number) => {
+    console.log("Select changed to:", value);
+};
