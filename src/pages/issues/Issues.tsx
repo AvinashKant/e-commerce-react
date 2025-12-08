@@ -1,4 +1,4 @@
-import Breadcrumb from '../components/Breadcrumb'
+import Breadcrumb from '../../components/Breadcrumb'
 import { HugeiconsIcon } from '@hugeicons/react';
 import { ArrowRight01Icon, Home01Icon } from '@hugeicons/core-free-icons';
 const Links = [

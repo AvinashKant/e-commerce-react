@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
 import Dashboard from "./pages/Dashboard";
 import Boards from "./pages/Boards";
-import Issues from "./pages/Issues";
+import Issues from "./pages/issues/Issues";
 
 const publicRoutes = [
   {
