@@ -2,13 +2,14 @@ import { createBrowserRouter } from "react-router";
 import { Counter } from './features/counter/Counter';
 import ErrorPage from "./pages/ErrorPage";
 import Layout from "./components/Layout/Layout";
-import Login from "./features/login/Login";
-import Register from "./features/register/Register";
 import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
 import Dashboard from "./pages/Dashboard";
 import Boards from "./pages/Boards";
 import Issues from "./pages/issues/Issues";
+import Login from "./pages/Login";
+import Singup from './pages/Singup'
+
 
 const publicRoutes = [
   {
@@ -21,7 +22,7 @@ const publicRoutes = [
   },
   {
     path: "singup",
-    element: <Register />
+    element: <Singup />
   },
   {
     path: "contact-us",

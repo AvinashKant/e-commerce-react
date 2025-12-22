@@ -1,4 +1,5 @@
 import { useForm, SubmitHandler } from "react-hook-form"
+import Input from "../../components/Form/Input"
 
 type Inputs = {
     example: string
@@ -15,16 +16,17 @@ export default function Login() {
     const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
     return (
         <>
-            <div className="">
+            <div className="border flex justify-center">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div>
                         Login
                     </div>
                     <div>
-                        <div>
-                            <input type="text" placeholder="Username" />
+                        <div className="m-1">
+                            <Input type="email" placeholderText="Email" {...register("password", { required: true })} />
+                            {errors.email && <span>This field is required</span>}
                         </div>
-                        <div>
+                        <div className="m-1">
                             {/* include validation with required or other standard HTML validation rules */}
                             <input {...register("password", { required: true })} />
                             {/* errors will return when field validation fails  */}
@@ -32,6 +34,7 @@ export default function Login() {
                         </div>
                         <div>
                             <input className="bg-sky-500 hover:bg-sky-700" type="submit" />
+
 
                         </div>
                     </div>
