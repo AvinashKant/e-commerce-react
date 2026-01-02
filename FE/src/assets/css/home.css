@@ -1,8 +1,8 @@
-.toprestaurant .heading{
-    display: flex;
-    justify-content: space-between;
+.toprestaurant .heading {
+  display: flex;
+  justify-content: space-between;
 }
 
-.arrowBtns .btnArrorw{
-    margin: 5px;;
+.arrowBtns .btnArrorw {
+  margin: 5px;
 }

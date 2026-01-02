@@ -1,5 +1,5 @@
-import axios from "axios";
-import LocalStorageService from "../services/LocalStorageService";
+import axios from 'axios';
+import LocalStorageService from '../services/LocalStorageService';
 
 //https://axios-http.com/docs/req_config
 
@@ -12,11 +12,11 @@ const instance = axios.create({
       /**
        * Do whatever you want to transform the data
        */
-      headers["Content-Type"] = "application/json";
+      headers['Content-Type'] = 'application/json';
       //headers["Accept"] = "application/json";
       const token = LocalStorageService.getAccessToken();
       if (token) {
-        headers["Authorization"] = `Bearer ${token}`;
+        headers['Authorization'] = `Bearer ${token}`;
       }
       return data;
     },
@@ -49,7 +49,7 @@ instance.interceptors.request.use(
      * works on request error
      */
     return Promise.reject(error);
-  },
+  }
 );
 
 instance.interceptors.response.use(
@@ -83,7 +83,7 @@ instance.interceptors.response.use(
     console.log("--------instance.interceptors.response end-----------------");
     */
     return Promise.reject(error);
-  },
+  }
 );
 
 export default instance;

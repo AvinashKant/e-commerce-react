@@ -1,6 +1,6 @@
-import { useLocation, Navigate } from "react-router";
+import { useLocation, Navigate } from 'react-router';
 
-import localStorageObj from "../services/LocalStorageService";
+import localStorageObj from '../services/LocalStorageService';
 
 export function redirectToPath(path: string) {
   const location = useLocation();

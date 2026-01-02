@@ -1,9 +1,9 @@
 class LocalStorageService {
   setAccessToken(token: string) {
-    localStorage.setItem("ec_access_token", token);
+    localStorage.setItem('ec_access_token', token);
   }
   getAccessToken() {
-    return localStorage.getItem("ec_access_token");
+    return localStorage.getItem('ec_access_token');
   }
   clearStorage() {
     localStorage.clear();

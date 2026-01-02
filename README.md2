@@ -1,0 +1,12 @@
+# FE contain react code for view
+
+# BE contain the python FastAPI code for backend operation
+
+
+user_collection.update_one(
+    {"_id": user_id},
+    {"$set": {
+        "company": company,
+        "updated_at": datetime.now(timezone.utc)
+    }}
+)

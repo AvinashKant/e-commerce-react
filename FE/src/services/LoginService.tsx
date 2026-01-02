@@ -1,9 +1,9 @@
-import httpClient from "../utility/http";
+import httpClient from '../utility/http';
 
 class GroupService {
   async fetchGroups() {
     return await httpClient
-      .get("v1/groups")
+      .get('v1/groups')
       .then((response) => response.data)
       .catch((error) => {
         throw error;

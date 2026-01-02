@@ -21,85 +21,90 @@ const options = [
 ];
 
 export default function Issues() {
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  const currentState = searchParams.get('state');
+  const [searchParams] = useSearchParams();
+  const currentState = searchParams.get("state");
 
   return (
     <>
       <Breadcrumb links={Links} />
-      <div className="flex justify-between border-b  border-gray-200">
-          <div className="flex gap-4">
-            <NavLink
-              key="open"
-              to="/issues"
-              className={`text-sm/6 font-semibold transition-colors ${
-                currentState == undefined && 'border-b-2 border-blue-900 text-gray-900'
-              }`}
-            >
-              Open
-            </NavLink>
-            <NavLink
-              key="closed"
-              to="/issues?state=closed"
-              className={`text-sm/6 font-semibold transition-colors ${
-                currentState === 'closed' && 'border-b-2 border-blue-900 text-gray-900'
-              }`}
-            >
-              Closed
-            </NavLink>
-            <NavLink
-              key="all"
-              to="/issues?state=all"
-              className={`text-sm/6 font-semibold transition-colors ${
-                currentState === 'all' && 'border-b-2 border-blue-900 text-gray-900'
-              }`}
-            >
-              All
-            </NavLink>
-          </div>
-          <div className="flex gap-3">
-            <Button title="Bulk edit" />
-            <Button title="New item" variant="blue" className="text-sm" />
-          </div>
-      </div>
-      <div className="flex flex-col justify-center items-center">
-        <div className="flex flex-col items-center gap-1 max-w-2xl ">
-          <HugeiconsIcon
-            icon={Home01Icon}
-            size={24}
-            color="#000000"
-            strokeWidth={1.5}
-            className="items-center"
-          />
-          <h1 className="text-3xl text-center font-semibold">
-            Track bugs, plan features, and organize your work with issues
-          </h1>
-          <p>
-            Use issues (also known as tickets or stories on other platforms) to collaborate on
-            ideas, solve problems, and plan your project.
-          </p>
-          <div className="flex gap-4">
-            <button className="">New item</button>
-          </div>
+
+      {/* ---------- HEADER ---------- */}
+      <div className="flex justify-between items-center px-6 py-3 border-b border-gray-200 bg-white">
+        
+        {/* Tabs */}
+        <div className="flex gap-6">
+          <NavLink
+            to="/issues"
+            className={`pb-2 text-sm font-medium ${
+              !currentState
+                ? "border-b-2 border-blue-600 text-gray-900"
+                : "text-gray-500 hover:text-gray-800"
+            }`}
+          >
+            Open
+          </NavLink>
+
+          <NavLink
+            to="/issues?state=closed"
+            className={`pb-2 text-sm font-medium border-b -mb-px ${
+              currentState === "closed"
+              ? "border-b-2 border-blue-600 text-gray-900"
+                : "text-gray-500 hover:text-gray-800"
+            }`}
+            
+          >
+            Closed
+          </NavLink>
+
+          <NavLink
+            to="/issues?state=all"
+            className={`pb-2 text-sm font-medium ${
+              currentState === "all"
+                ? "border-b-2 border-blue-600 text-gray-900"
+                : "text-gray-500 hover:text-gray-800"
+            }`}
+          >
+            All
+          </NavLink>
         </div>
-        <div className="border-t">
-          <div className="flex flex-row">
-            <div>
-              Using Jira for issue tracking?
-              <a href="">See integration options</a>
-            </div>
-            <div>
-              <a href="">See integration options</a>
-            </div>
-          </div>
+
+        {/* Actions */}
+        <div className="flex gap-3">
+          <Button title="Bulk edit" />
+          <Button title="New item" variant="blue" className="text-sm" />
         </div>
       </div>
 
-      <div className="flex h-10 items-center">
-        <div className="">Bulk edit Bulk edit</div>
-        <VerticalDivider className="mx-2 border-red-500 border-r-4" />
-        <div>New item</div>
+      {/* ---------- EMPTY STATE ---------- */}
+      <div className="flex flex-col justify-center items-center mt-16 px-6">
+        
+        <HugeiconsIcon icon={Home01Icon} size={28} strokeWidth={1.5} />
+
+        <h1 className="text-3xl font-semibold text-center mt-4">
+          Track bugs, plan features, and organize your work with issues
+        </h1>
+
+        <p className="text-gray-600 text-center mt-2 max-w-xl">
+          Use issues to collaborate on ideas, solve problems, and plan your project.
+        </p>
+
+        <div className="mt-5">
+          <Button title="New item" variant="blue" />
+        </div>
+      </div>
+
+      {/* ---------- INFO BAR ---------- */}
+      <div className="mt-10 border-t py-4 px-6 flex justify-between text-sm text-gray-600">
+        <div>
+          Using Jira for issue tracking?
+          <a className="text-blue-600 ml-1 hover:underline" href="">
+            See integration options
+          </a>
+        </div>
+
+        <a className="text-blue-600 hover:underline" href="">
+          Learn more
+        </a>
       </div>
     </>
   );

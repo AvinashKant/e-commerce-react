@@ -1,3 +1,3 @@
-import Register from "../features/register/Register";
+import Register from '../features/register/Register';
 
-export default Register
+export default Register;

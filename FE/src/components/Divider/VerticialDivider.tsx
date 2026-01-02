@@ -1,13 +1,9 @@
 interface VerticalDividerProps {
-    className?: string;
+  className?: string;
 }
 
-const VerticalDivider: React.FC<VerticalDividerProps> = ({
-    className = ""
-}) => {
-    return (
-        <div className={`border-r h-full ${className}`}></div>
-    );
-}
+const VerticalDivider: React.FC<VerticalDividerProps> = ({ className = '' }) => {
+  return <div className={`border-r h-full ${className}`}></div>;
+};
 
 export default VerticalDivider;
