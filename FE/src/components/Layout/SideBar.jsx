@@ -3,7 +3,7 @@ import { NavLink } from 'react-router';
 export default function AuthHeader() {
   return (
     <>
-      <li>
+      <li className=''>
         <NavLink key="Home" to="/dashboard" className="text-sm/6 font-semibold text-gray-900 ">
           Dashboard
         </NavLink>
