@@ -21,7 +21,7 @@ const Panel: React.FC<PanelProps> = ({
     // Overlay
     <div className="absolute right-0 top-0 h-dvh">
       {/* Modal Box */}
-      <div className="bg-white rounded-sm shadow-2xl w-[480px]">
+      <div className="bg-white rounded-sm shadow-2xl w-96 h-full flex flex-col justify-between">
         {/* Header */}
         <div className="flex justify-between items-start border-b px-4 py-3">
           <div>

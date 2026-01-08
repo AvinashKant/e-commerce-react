@@ -13,7 +13,7 @@ interface BreadcrumbProps {
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ links }) => {
   return (
-    <div className="flex mb-2 text-gray-600 border-b border-gray-200 pb-2 items-center gap-2">
+    <div className="flex mb-2 text-gray-600 border-b text-sm border-gray-200 pb-2 items-center gap-2">
       <span>Home</span>
 
       <HugeiconsIcon icon={ArrowRight01Icon} size={24} color="#000000" strokeWidth={1.5} />
